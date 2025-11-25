@@ -95,7 +95,7 @@
   
   .image-wrapper {
     max-width: 600px;   /* ei veny liian leveäksi */
-    margin: 12px auto;  /* keskitetään */
+    margin: 12px auto; 
   }
   
   .responsive-image {
