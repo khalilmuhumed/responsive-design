@@ -1,0 +1,134 @@
+/* Workshop 5 – Responsive Design */
+
+/* Perus-tyyli koko sivulle */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Otsikot */
+  h2 {
+    color: #003366;
+    margin-top: 24px;
+  }
+  
+  /* ===========================
+     Task 4: Responsive nav
+     =========================== */
+  
+  .responsive-nav {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 10px 16px;
+    margin: -16px -16px 16px -16px; /* täysi leveys ylhäällä */
+  }
+  
+  .responsive-nav .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .responsive-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu-toggle {
+    display: none; /* näkyviin vasta pienellä ruudulla */
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  
+  /* Pienet näytöt: näytä vain nappi */
+  @media (max-width: 600px) {
+    .responsive-nav .nav-list {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  /* ===========================
+     Task 1: Responsive layout
+     =========================== */
+  
+  .responsive-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    background-color: #e0e7ff;
+    border-radius: 6px;
+    text-align: center;
+  }
+  
+  /* Pienellä näytöllä yksi sarake per rivi */
+  @media (max-width: 600px) {
+    .column {
+      flex: 100%;
+    }
+  }
+  
+  /* ===========================
+     Task 2: Responsive image
+     =========================== */
+  
+  .image-wrapper {
+    max-width: 600px;   /* ei veny liian leveäksi */
+    margin: 12px auto;  /* keskitetään */
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* ===========================
+     Task 3: Media query box
+     =========================== */
+  
+  .media-query-box {
+    padding: 20px;
+    text-align: center;
+    margin-top: 16px;
+    border-radius: 6px;
+    color: #ffffff;
+  }
+  
+  /* Max 600px: punainen */
+  @media (max-width: 600px) {
+    .media-query-box {
+      background-color: lightcoral;
+    }
+  }
+  
+  /* Min 601px: sininen */
+  @media (min-width: 601px) {
+    .media-query-box {
+      background-color: lightblue;
+      color: #003366;
+    }
+  }
+  
